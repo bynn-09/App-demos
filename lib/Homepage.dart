@@ -176,73 +176,129 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('WhatsApp Chat'),
+        backgroundColor: Colors.green,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.more_vert),
+            onPressed: () {
+              // Aksi untuk tombol lebih banyak
+            },
+          ),
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.green,
+              ),
+              child: Text(
+                'WhatsApp',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.chat),
+              title: Text('Chats'),
+              onTap: () {
+                // Aksi untuk menu Chats
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.group),
+              title: Text('Groups'),
+              onTap: () {
+                // Aksi untuk menu Groups
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+                // Aksi untuk menu Settings
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       body: Container(
         padding: EdgeInsets.only(top: 8),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: EdgeInsets.all(10),
-              color: const Color.fromARGB(255, 211, 202, 202),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Icon(
-                        Icons.chat,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Icon(
-                        Icons.update,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Icon(
-                        Icons.chat_bubble_outline,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Icon(
-                        Icons.people_alt_rounded,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Icon(
-                        Icons.settings,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        width: 30,
-                        height: 30,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(60),
-                          color: Colors.green,
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            // Container(
+            //   padding: EdgeInsets.all(10),
+            //   color: const Color.fromARGB(255, 211, 202, 202),
+            //   child: Column(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       Column(
+            //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //         children: [
+            //           Icon(
+            //             Icons.chat,
+            //             size: 30,
+            //             color: Colors.grey,
+            //           ),
+            //           SizedBox(
+            //             height: 5,
+            //           ),
+            //           Icon(
+            //             Icons.update,
+            //             size: 30,
+            //             color: Colors.grey,
+            //           ),
+            //           SizedBox(
+            //             height: 5,
+            //           ),
+            //           Icon(
+            //             Icons.chat_bubble_outline,
+            //             size: 30,
+            //             color: Colors.grey,
+            //           ),
+            //           SizedBox(
+            //             height: 5,
+            //           ),
+            //           Icon(
+            //             Icons.people_alt_rounded,
+            //             size: 30,
+            //             color: Colors.grey,
+            //           ),
+            //         ],
+            //       ),
+            //       Column(
+            //         children: [
+            //           Icon(
+            //             Icons.settings,
+            //             size: 30,
+            //             color: Colors.grey,
+            //           ),
+            //           SizedBox(
+            //             height: 5,
+            //           ),
+            //           Container(
+            //             width: 30,
+            //             height: 30,
+            //             decoration: BoxDecoration(
+            //               borderRadius: BorderRadius.circular(60),
+            //               color: Colors.green,
+            //             ),
+            //           )
+            //         ],
+            //       ),
+            //     ],
+            //   ),
+            // ),
             SizedBox(
               width: 15,
             ),
@@ -251,10 +307,10 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Whatsapp",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
+                  // Text(
+                  //   "Whatsapp",
+                  //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  // ),
                   SizedBox(
                     height: 4,
                   ),
@@ -295,18 +351,19 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
                         width: 40,
                         height: 40,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(80),
-                            color: Colors.green),
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                  'https://media.licdn.com/dms/image/v2/C4D0BAQFfqSED4n1XiQ/company-logo_200_200/company-logo_200_200/0/1630491895803/rasa_logo?e=2147483647&v=beta&t=_B_tZy2PVwNwRdPaNsyV54GBCvXjA8fytWeseN39bSU'),
+                              fit: BoxFit.cover,
+                            )),
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Ateng"),
-                          Text("Last seen today at 3.34 PM")
-                        ],
+                        children: [Text("Chat Bot App Dev"), Text("Online")],
                       )
                     ],
                   )
@@ -334,8 +391,12 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
                             width: 40,
                             height: 40,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(80),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                    'https://media.licdn.com/dms/image/v2/C4D0BAQFfqSED4n1XiQ/company-logo_200_200/company-logo_200_200/0/1630491895803/rasa_logo?e=2147483647&v=beta&t=_B_tZy2PVwNwRdPaNsyV54GBCvXjA8fytWeseN39bSU'),
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
                           SizedBox(width: 12),
@@ -343,7 +404,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Ateng",
+                                "Chat Bot App Dev",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
