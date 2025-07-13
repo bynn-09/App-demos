@@ -16,30 +16,30 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
   final ScrollController _scrollController = ScrollController();
   List<Map<String, dynamic>> messages = [
     {
-      'text': 'Halo, apa kabar?',
+      'text': 'Halo, apa kabar? Ada Yang bisa saya bantu?',
       'time': '10:30',
       'isOutgoing': false,
     },
-    {
-      'text': 'Gimana kabar kamu hari ini?',
-      'time': '10:31',
-      'isOutgoing': false,
-    },
-    {
-      'text': 'Halo juga! Alhamdulillah baik',
-      'time': '10:32',
-      'isOutgoing': true,
-    },
-    {
-      'text': 'Kamu gimana? Semoga sehat selalu ya',
-      'time': '10:33',
-      'isOutgoing': true,
-    },
-    {
-      'text': 'Amin, makasih ya. Kamu juga sehat selalu',
-      'time': '10:34',
-      'isOutgoing': false,
-    },
+    // {
+    //   'text': 'Gimana kabar kamu hari ini?',
+    //   'time': '10:31',
+    //   'isOutgoing': false,
+    // },
+    // {
+    //   'text': 'Halo juga! Alhamdulillah baik',
+    //   'time': '10:32',
+    //   'isOutgoing': true,
+    // },
+    // {
+    //   'text': 'Kamu gimana? Semoga sehat selalu ya',
+    //   'time': '10:33',
+    //   'isOutgoing': true,
+    // },
+    // {
+    //   'text': 'Amin, makasih ya. Kamu juga sehat selalu',
+    //   'time': '10:34',
+    //   'isOutgoing': false,
+    // },
   ];
 
   @override
@@ -177,7 +177,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('WhatsApp Chat'),
+        title: Text('AI Chat by App Dev'),
         backgroundColor: Colors.green,
         actions: [
           IconButton(
@@ -343,7 +343,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 22,
                   ),
                   Row(
                     children: [

@@ -134,7 +134,7 @@ class _LoadingscreenState extends State<Loadingscreen> {
 
           // Nama aplikasi
           Text(
-            'WhatsApp Clone',
+            'AI Chat By App Dev',
             style: TextStyle(
               fontSize: 28,
               fontWeight: FontWeight.bold,
