@@ -125,7 +125,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
       'Maaf, saya sedang sibuk. Nanti saya balas ya.',
       'Saya mengerti maksud Anda.',
       'Boleh dijelaskan lebih detail?',
-      'Saya akan membantu Anda.',
+      'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ',
     ];
 
     // Pilih respons berdasarkan kata kunci
@@ -178,7 +178,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text('AI Chat by App Dev'),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.white,
         actions: [
           IconButton(
             icon: Icon(Icons.more_vert),
@@ -232,6 +232,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
         ),
       ),
       body: Container(
+        height: double.infinity, // Make the container fill the screen height
         padding: EdgeInsets.only(top: 8),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -302,77 +303,79 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
             SizedBox(
               width: 15,
             ),
+            // Flexible(
+            //   // flex: 2,
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: [
+            //       // Text(
+            //       //   "Whatsapp",
+            //       //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            //       // ),
+            //       SizedBox(
+            //         height: 4,
+            //       ),
+            //       Container(
+            //         margin: EdgeInsets.zero,
+            //         width: 450,
+            //         height: 50,
+            //         color: Colors.white,
+            //         child: TextField(
+            //           decoration: InputDecoration(
+            //             enabledBorder: OutlineInputBorder(
+            //                 borderRadius: BorderRadius.circular(80)),
+            //             hintText: "Cari atau mulai pesan baru",
+            //             border: OutlineInputBorder(
+            //                 borderRadius: BorderRadius.circular(80)),
+            //             prefixIcon: Icon(Icons.search),
+            //           ),
+            //         ),
+            //       ),
+            //       SizedBox(
+            //         height: 10,
+            //       ),
+            //       Row(
+            //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //         children: [
+            //           buildChoiceChip("All", 0),
+            //           buildChoiceChip("Unread", 1),
+            //           buildChoiceChip("Read", 2),
+            //           buildChoiceChip("Group", 3)
+            //         ],
+            //       ),
+            //       SizedBox(
+            //         height: 22,
+            //       ),
+            //       Row(
+            //         children: [
+            //           Container(
+            //             width: 40,
+            //             height: 40,
+            //             decoration: BoxDecoration(
+            //                 borderRadius: BorderRadius.circular(20),
+            //                 image: DecorationImage(
+            //                   image: NetworkImage(
+            //                       'https://media.licdn.com/dms/image/v2/C4D0BAQFfqSED4n1XiQ/company-logo_200_200/company-logo_200_200/0/1630491895803/rasa_logo?e=2147483647&v=beta&t=_B_tZy2PVwNwRdPaNsyV54GBCvXjA8fytWeseN39bSU'),
+            //                   fit: BoxFit.cover,
+            //                 )),
+            //           ),
+            //           SizedBox(
+            //             width: 10,
+            //           ),
+            //           Column(
+            //             crossAxisAlignment: CrossAxisAlignment.start,
+            //             children: [Text("Chat Bot App Dev"), Text("Online")],
+            //           )
+            //         ],
+            //       )
+            //     ],
+            //   ),
+            // ),
             Flexible(
-              // flex: 2,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Text(
-                  //   "Whatsapp",
-                  //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  // ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Container(
-                    margin: EdgeInsets.zero,
-                    width: 450,
-                    height: 50,
-                    color: Colors.white,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(80)),
-                        hintText: "Cari atau mulai pesan baru",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(80)),
-                        prefixIcon: Icon(Icons.search),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      buildChoiceChip("All", 0),
-                      buildChoiceChip("Unread", 1),
-                      buildChoiceChip("Read", 2),
-                      buildChoiceChip("Group", 3)
-                    ],
-                  ),
-                  SizedBox(
-                    height: 22,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://media.licdn.com/dms/image/v2/C4D0BAQFfqSED4n1XiQ/company-logo_200_200/company-logo_200_200/0/1630491895803/rasa_logo?e=2147483647&v=beta&t=_B_tZy2PVwNwRdPaNsyV54GBCvXjA8fytWeseN39bSU'),
-                              fit: BoxFit.cover,
-                            )),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [Text("Chat Bot App Dev"), Text("Online")],
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Flexible(
-              flex: 2,
+              flex: 6,
               child: Container(
+                height: double
+                    .infinity, // Ensure this container also fills available height
                 padding: EdgeInsets.all(16),
                 child: Column(
                   children: [
@@ -380,10 +383,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
                     Container(
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: Colors.grey[100],
-                        border: Border(
-                          bottom: BorderSide(color: Colors.grey[300]!),
-                        ),
+                        color: Colors.transparent,
                       ),
                       child: Row(
                         children: [
@@ -420,15 +420,15 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
                             ],
                           ),
                           Spacer(),
-                          Row(
-                            children: [
-                              Icon(Icons.videocam, color: Colors.grey[600]),
-                              SizedBox(width: 16),
-                              Icon(Icons.call, color: Colors.grey[600]),
-                              SizedBox(width: 16),
-                              Icon(Icons.more_vert, color: Colors.grey[600]),
-                            ],
-                          ),
+                          // Row(
+                          //   children: [
+                          //     Icon(Icons.videocam, color: Colors.grey[600]),
+                          //     SizedBox(width: 16),
+                          //     Icon(Icons.call, color: Colors.grey[600]),
+                          //     SizedBox(width: 16),
+                          //     Icon(Icons.more_vert, color: Colors.grey[600]),
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -554,13 +554,13 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
           children: [
             Text(
               message,
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 25),
             ),
             SizedBox(height: 4),
             Text(
               time,
               style: TextStyle(
-                fontSize: 10,
+                fontSize: 15,
                 color: Colors.grey[600],
               ),
             ),
@@ -601,7 +601,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
           children: [
             Text(
               message,
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 25),
             ),
             SizedBox(height: 4),
             Row(
@@ -610,7 +610,7 @@ class _ChatWhatsAppState extends State<ChatWhatsApp> {
                 Text(
                   time,
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 15,
                     color: Colors.grey[600],
                   ),
                 ),
